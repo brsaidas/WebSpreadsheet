@@ -7,8 +7,10 @@
     <script type="text/javascript" src="./script.js"></script>
   </head>
   <body>
-    <label for="textarea">Entrada de Dados:</label><br/>
-    <textarea id="textarea"></textarea>
+    <label for="textarea">Banco de Dados</label><br/>
+    <textarea id="textarea" onchange="loadData()"></textarea><br/>
+
+    <hr/>
 
     <table id="table">
       <thead id="thead">
@@ -16,12 +18,17 @@
       <tbody id="tbody">
       </tbody>
     </table>
-    
-    <button type="button" onclick="show()">Exibir</button>
 
-    <button type="button" onclick="recoverData()">Recuperar Dados</button><br/>
-  
-    <input type="text" placeholder="Nova Colunas..."/>
-    <button type="button" onclick="addColumn()">Adicionar Coluna</button>
+    <hr/>
+      
+    <button type="button" onclick="addColumn()">Adicionar Coluna</button><br/>
+    <button type="button" onclick="addRow()">Adicionar Linha</button>
+
+    <hr/>
+
+    <input type="text" placeholder="Excluir coluna..." id="deleteColumn"/>
+    <button type="button" onclick="deleteColumn()">Excluir Coluna</button><br/>
+
+    <hr/>
   </body>
 </html>
